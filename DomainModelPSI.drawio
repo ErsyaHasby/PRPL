@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="wZr6AntR2YyyQ3PQ7y7G">
+    <mxGraphModel dx="2302" dy="1025" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4HzLg1I37KvngCRO067x-1" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Customer" vertex="1">
+          <mxGeometry height="120" width="220" x="315" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-2" parent="4HzLg1I37KvngCRO067x-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="- nama: String" vertex="1">
+          <mxGeometry height="30" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-3" parent="4HzLg1I37KvngCRO067x-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="+ serahkanProduk(): void&#xa;+ lakukanPembayaran(): void" vertex="1">
+          <mxGeometry height="60" width="220" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-4" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Kasir" vertex="1">
+          <mxGeometry height="180" width="220" x="315" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-5" parent="4HzLg1I37KvngCRO067x-4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="- idKasir: int&#xa;- nama: String&#xa;- username: String&#xa;- role: String&#xa;- aktif: Boolean" vertex="1">
+          <mxGeometry height="90" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-6" parent="4HzLg1I37KvngCRO067x-4" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="+ bukaAplikasiBarcode(): void&#xa;+ arahkanKamera(): void&#xa;+ konfirmasiPembayaran(): void" vertex="1">
+          <mxGeometry height="60" width="220" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-7" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;" value="Scanner" vertex="1">
+          <mxGeometry height="150" width="220" x="620" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-8" parent="4HzLg1I37KvngCRO067x-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="- perangkat: String&#xa;- statusKoneksi: String" vertex="1">
+          <mxGeometry height="50" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-9" parent="4HzLg1I37KvngCRO067x-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="+ captureBarcode(): void&#xa;+ konversiKeKode(): String&#xa;+ kirimKePOS(kode: String): void" vertex="1">
+          <mxGeometry height="70" width="220" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-10" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;" value="SistemPOS" vertex="1">
+          <mxGeometry height="190" width="220" x="315" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-11" parent="4HzLg1I37KvngCRO067x-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="- versiSistem: String" vertex="1">
+          <mxGeometry height="30" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-12" parent="4HzLg1I37KvngCRO067x-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="+ terimaScan(kode: String): void&#xa;+ cariProduk(kode: String): Produk&#xa;+ tambahKeKeranjang(p: Produk): void&#xa;+ tampilkanNotifTidakDitemukan(): void&#xa;+ prosesSelesai(): void" vertex="1">
+          <mxGeometry height="130" width="220" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-13" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fontSize=13;fillColor=#fff2cc;strokeColor=#d6b656;" value="Transaksi" vertex="1">
+          <mxGeometry height="230" width="220" x="790" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-14" parent="4HzLg1I37KvngCRO067x-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="- idTransaksi: int&#xa;- noTransaksi: String&#xa;- tanggal: DateTime&#xa;- totalHarga: Decimal&#xa;- diskon: Decimal&#xa;- totalBayar: Decimal&#xa;- metodeBayar: String&#xa;- status: String&#xa;- uangDiterima: Decimal" vertex="1">
+          <mxGeometry height="150" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-15" parent="4HzLg1I37KvngCRO067x-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="+ tambahItem(item: ItemTransaksi): void&#xa;+ hitungTotal(): Decimal&#xa;+ selesaikan(): void" vertex="1">
+          <mxGeometry height="50" width="220" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-16" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fontSize=13;fillColor=#f8cecc;strokeColor=#b85450;" value="ItemTransaksi" vertex="1">
+          <mxGeometry height="170" width="220" x="820" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-17" parent="4HzLg1I37KvngCRO067x-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="- idDetail: int&#xa;- jumlah: int&#xa;- hargaSatuan: Decimal&#xa;- subtotal: Decimal" vertex="1">
+          <mxGeometry height="90" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-18" parent="4HzLg1I37KvngCRO067x-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="+ hitungSubtotal(): Decimal" vertex="1">
+          <mxGeometry height="50" width="220" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-19" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;" value="Produk" vertex="1">
+          <mxGeometry height="250" width="220" x="315" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-20" parent="4HzLg1I37KvngCRO067x-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="- idProduk: int&#xa;- kodeBarcode: String&#xa;- namaProduk: String&#xa;- kategori: String&#xa;- hargaJual: Decimal&#xa;- hargaBeli: Decimal&#xa;- stokSaatIni: int&#xa;- stokMinimum: int&#xa;- satuan: String&#xa;- aktif: Boolean" vertex="1">
+          <mxGeometry height="170" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-21" parent="4HzLg1I37KvngCRO067x-19" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="+ apakahTersedia(): Boolean&#xa;+ kurangiStok(jumlah: int): void" vertex="1">
+          <mxGeometry height="50" width="220" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-22" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fontSize=13;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Pembayaran" vertex="1">
+          <mxGeometry height="170" width="220" x="1190" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-23" parent="4HzLg1I37KvngCRO067x-22" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="- jumlahBayar: Decimal&#xa;- uangDiterima: Decimal&#xa;- kembalian: Decimal&#xa;- metode: String&#xa;- waktu: DateTime&#xa;- status: String" vertex="1">
+          <mxGeometry height="100" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-24" parent="4HzLg1I37KvngCRO067x-22" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="+ proses(): void&#xa;+ hitungKembalian(): Decimal" vertex="1">
+          <mxGeometry height="40" width="220" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-25" parent="1" style="swimlane;fontStyle=1;align=center;startSize=30;fontSize=13;fillColor=#e1d5e7;strokeColor=#9673a6;" value="BarcodeLog" vertex="1">
+          <mxGeometry height="150" width="220" x="1000" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-26" parent="4HzLg1I37KvngCRO067x-25" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="- idLog: int&#xa;- kodeBarcode: String&#xa;- waktuScan: DateTime&#xa;- statusScan: String&#xa;- perangkat: String" vertex="1">
+          <mxGeometry height="90" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-27" parent="4HzLg1I37KvngCRO067x-25" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=12;" value="+ catat(): void" vertex="1">
+          <mxGeometry height="30" width="220" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-28" edge="1" parent="1" source="4HzLg1I37KvngCRO067x-1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=none;fontSize=11;" target="4HzLg1I37KvngCRO067x-13" value="memulai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-29" edge="1" parent="1" source="4HzLg1I37KvngCRO067x-5" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=none;fontSize=11;exitX=0.993;exitY=0.884;exitDx=0;exitDy=0;exitPerimeter=0;" target="4HzLg1I37KvngCRO067x-7" value="menggunakan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-30" edge="1" parent="1" source="4HzLg1I37KvngCRO067x-4" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=none;fontSize=11;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="4HzLg1I37KvngCRO067x-14" value="mengelola&#xa;1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-31" edge="1" parent="1" source="4HzLg1I37KvngCRO067x-7" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=none;fontSize=11;entryX=0.997;entryY=0.122;entryDx=0;entryDy=0;entryPerimeter=0;" target="4HzLg1I37KvngCRO067x-12" value="mengirim kode">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-32" edge="1" parent="1" source="4HzLg1I37KvngCRO067x-10" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=none;fontSize=11;" target="4HzLg1I37KvngCRO067x-19" value="mencari">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-33" edge="1" parent="1" source="4HzLg1I37KvngCRO067x-10" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=none;fontSize=11;entryX=0.367;entryY=1.027;entryDx=0;entryDy=0;entryPerimeter=0;" target="4HzLg1I37KvngCRO067x-15" value="menambah item">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-34" edge="1" parent="1" source="4HzLg1I37KvngCRO067x-15" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=ERmandOne;startFill=0;fontSize=11;exitX=0.627;exitY=1.043;exitDx=0;exitDy=0;exitPerimeter=0;" target="4HzLg1I37KvngCRO067x-16" value="terdiri dari&#xa;1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-35" edge="1" parent="1" source="4HzLg1I37KvngCRO067x-16" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=none;fontSize=11;" target="4HzLg1I37KvngCRO067x-19" value="merujuk ke">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-36" edge="1" parent="1" source="4HzLg1I37KvngCRO067x-13" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=none;fontSize=11;" target="4HzLg1I37KvngCRO067x-22" value="diselesaikan dengan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4HzLg1I37KvngCRO067x-37" edge="1" parent="1" source="4HzLg1I37KvngCRO067x-15" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=none;fontSize=11;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="4HzLg1I37KvngCRO067x-25" value="mencatat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
